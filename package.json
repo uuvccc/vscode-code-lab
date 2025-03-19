@@ -1,161 +1,151 @@
 {
-    "name": "vscode-leetcode",
-    "displayName": "LeetCode",
-    "description": "Solve LeetCode problems in VS Code",
+    "name": "vscode-codelab",
+    "displayName": "CodeLab",
+    "description": "A powerful coding assistant for VS Code that enhances your development workflow.",
     "version": "0.18.4",
-    "author": "LeetCode",
-    "publisher": "LeetCode",
+    "author": "New Author Name",
+    "publisher": "CodeLab",
     "license": "MIT",
-    "icon": "resources/LeetCode.png",
+    "icon": "codelab.png",
     "engines": {
         "vscode": "^1.57.0"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/LeetCode-OpenSource/vscode-leetcode"
-    },
-    "homepage": "https://github.com/LeetCode-OpenSource/vscode-leetcode/blob/master/README.md",
     "categories": [
         "Other",
         "Snippets"
     ],
-    "keywords": [
-        "leetcode",
-        "algorithm",
-        "interview"
-    ],
     "preview": true,
     "activationEvents": [
-        "onCommand:leetcode.toggleLeetCodeCn",
-        "onCommand:leetcode.signin",
-        "onCommand:leetcode.signout",
-        "onCommand:leetcode.manageSessions",
-        "onCommand:leetcode.refreshExplorer",
-        "onCommand:leetcode.pickOne",
-        "onCommand:leetcode.showProblem",
-        "onCommand:leetcode.previewProblem",
-        "onCommand:leetcode.searchProblem",
-        "onCommand:leetcode.testSolution",
-        "onCommand:leetcode.submitSolution",
-        "onCommand:leetcode.switchDefaultLanguage",
-        "onCommand:leetcode.problems.sort",
-        "onView:leetCodeExplorer"
+        "onCommand:codelab.toggleEndpoint",
+        "onCommand:codelab.signin",
+        "onCommand:codelab.signout",
+        "onCommand:codelab.manageSessions",
+        "onCommand:codelab.refreshExplorer",
+        "onCommand:codelab.pickOne",
+        "onCommand:codelab.showProblem",
+        "onCommand:codelab.previewProblem",
+        "onCommand:codelab.searchProblem",
+        "onCommand:codelab.testSolution",
+        "onCommand:codelab.submitSolution",
+        "onCommand:codelab.switchDefaultLanguage",
+        "onCommand:codelab.problems.sort",
+        "onView:codeLabExplorer"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "leetcode.deleteCache",
+                "command": "codelab.deleteCache",
                 "title": "Delete Cache",
-                "category": "LeetCode"
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.toggleLeetCodeCn",
+                "command": "codelab.toggleEndpoint",
                 "title": "Switch Endpoint",
-                "category": "LeetCode",
+                "category": "CodeLab",
                 "icon": "$(globe)"
             },
             {
-                "command": "leetcode.signin",
+                "command": "codelab.signin",
                 "title": "Sign In",
-                "category": "LeetCode",
+                "category": "CodeLab",
                 "icon": "$(sign-in)"
             },
             {
-                "command": "leetcode.signout",
+                "command": "codelab.signout",
                 "title": "Sign Out",
-                "category": "LeetCode"
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.manageSessions",
+                "command": "codelab.manageSessions",
                 "title": "Manage Sessions",
-                "category": "LeetCode"
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.refreshExplorer",
+                "command": "codelab.refreshExplorer",
                 "title": "Refresh",
-                "category": "LeetCode",
+                "category": "CodeLab",
                 "icon": "$(refresh)"
             },
             {
-                "command": "leetcode.pickOne",
+                "command": "codelab.pickOne",
                 "title": "Pick One",
-                "category": "LeetCode"
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.showProblem",
+                "command": "codelab.showProblem",
                 "title": "Show Problem",
-                "category": "LeetCode"
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.previewProblem",
+                "command": "codelab.previewProblem",
                 "title": "Preview Problem",
-                "category": "LeetCode"
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.searchProblem",
+                "command": "codelab.searchProblem",
                 "title": "Search Problem",
-                "category": "LeetCode",
+                "category": "CodeLab",
                 "icon": "$(search)"
             },
             {
-                "command": "leetcode.showSolution",
+                "command": "codelab.showSolution",
                 "title": "Show Top Voted Solution",
-                "category": "LeetCode"
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.testSolution",
-                "title": "Test in LeetCode",
-                "category": "LeetCode"
+                "command": "codelab.testSolution",
+                "title": "Test Solution",
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.submitSolution",
-                "title": "Submit to LeetCode",
-                "category": "LeetCode"
+                "command": "codelab.submitSolution",
+                "title": "Submit Solution",
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.addFavorite",
+                "command": "codelab.addFavorite",
                 "title": "Add to Favorite List",
-                "category": "LeetCode",
+                "category": "CodeLab",
                 "icon": {
                     "light": "resources/light/like.png",
                     "dark": "resources/dark/like.png"
                 }
             },
             {
-                "command": "leetcode.removeFavorite",
+                "command": "codelab.removeFavorite",
                 "title": "Remove from Favorite List",
-                "category": "LeetCode",
+                "category": "CodeLab",
                 "icon": {
                     "light": "resources/light/dislike.png",
                     "dark": "resources/dark/dislike.png"
                 }
             },
             {
-                "command": "leetcode.switchDefaultLanguage",
+                "command": "codelab.switchDefaultLanguage",
                 "title": "Switch Default Language",
-                "category": "LeetCode"
+                "category": "CodeLab"
             },
             {
-                "command": "leetcode.problems.sort",
+                "command": "codelab.problems.sort",
                 "title": "Sort Problems",
-                "category": "LeetCode",
+                "category": "CodeLab",
                 "icon": "$(sort-precedence)"
             }
         ],
         "viewsContainers": {
             "activitybar": [
                 {
-                    "id": "leetcode",
-                    "title": "LeetCode",
-                    "icon": "resources/LeetCode.svg"
+                    "id": "codelab",
+                    "title": "CodeLab",
+                    "icon": "codelab.svg"
                 }
             ]
         },
         "views": {
-            "leetcode": [
+            "codelab": [
                 {
-                    "id": "leetCodeExplorer",
+                    "id": "codeLabExplorer",
                     "name": "Problems"
                 }
             ]
@@ -163,38 +153,38 @@
         "menus": {
             "view/title": [
                 {
-                    "command": "leetcode.toggleLeetCodeCn",
-                    "when": "view == leetCodeExplorer",
+                    "command": "codelab.toggleEndpoint",
+                    "when": "view == codeLabExplorer",
                     "group": "navigation@0"
                 },
                 {
-                    "command": "leetcode.signin",
-                    "when": "view == leetCodeExplorer",
+                    "command": "codelab.signin",
+                    "when": "view == codeLabExplorer",
                     "group": "navigation@1"
                 },
                 {
-                    "command": "leetcode.searchProblem",
-                    "when": "view == leetCodeExplorer",
+                    "command": "codelab.searchProblem",
+                    "when": "view == codeLabExplorer",
                     "group": "navigation@2"
                 },
                 {
-                    "command": "leetcode.refreshExplorer",
-                    "when": "view == leetCodeExplorer",
+                    "command": "codelab.refreshExplorer",
+                    "when": "view == codeLabExplorer",
                     "group": "navigation@3"
                 },
                 {
-                    "command": "leetcode.signout",
-                    "when": "view == leetCodeExplorer",
+                    "command": "codelab.signout",
+                    "when": "view == codeLabExplorer",
                     "group": "overflow@1"
                 },
                 {
-                    "command": "leetcode.pickOne",
-                    "when": "view == leetCodeExplorer",
+                    "command": "codelab.pickOne",
+                    "when": "view == codeLabExplorer",
                     "group": "overflow@2"
                 },
                 {
-                    "command": "leetcode.problems.sort",
-                    "when": "view == leetCodeExplorer",
+                    "command": "codelab.problems.sort",
+                    "when": "view == codeLabExplorer",
                     "group": "overflow@3"
                 }
             ],
@@ -293,6 +283,27 @@
             {
                 "title": "LeetCode",
                 "properties": {
+                    "leetcode.proxy.enable": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "是否启用代理服务器"
+                    },
+                    "leetcode.proxy.host": {
+                        "type": "string",
+                        "default": "127.0.0.1",
+                        "description": "代理服务器主机地址"
+                    },
+                    "leetcode.proxy.port": {
+                        "type": "number",
+                        "default": 1080,
+                        "description": "代理服务器端口"
+                    },
+                    "leetcode.proxy.protocol": {
+                        "type": "string",
+                        "default": "http",
+                        "enum": ["http", "https", "socks5"],
+                        "description": "代理服务器协议类型"
+                    },
                     "leetcode.hideSolved": {
                         "type": "boolean",
                         "default": false,

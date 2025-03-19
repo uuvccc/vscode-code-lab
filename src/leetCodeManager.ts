@@ -6,7 +6,7 @@ import { EventEmitter } from "events";
 import * as vscode from "vscode";
 import { leetCodeChannel } from "./leetCodeChannel";
 import { leetCodeExecutor } from "./leetCodeExecutor";
-import { Endpoint, IQuickItemEx, loginArgsMapping, urls, urlsCn, UserStatus } from "./shared";
+import { Endpoint, IQuickItemEx, loginArgsMapping, urlsCn, UserStatus } from "./shared";
 import { createEnvOption } from "./utils/cpUtils";
 import { DialogType, openUrl, promptForOpenOutputChannel } from "./utils/uiUtils";
 import * as wsl from "./utils/wslUtils";
@@ -159,7 +159,7 @@ class LeetCodeManager extends EventEmitter {
                 return urlsCn.authLoginUrl;
             case Endpoint.LeetCode:
             default:
-                return urls.authLoginUrl;
+                return urlsCn.authLoginUrl;
         }
     }
 
